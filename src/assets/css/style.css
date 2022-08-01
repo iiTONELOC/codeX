@@ -161,8 +161,12 @@ main>ul>li:hover {
     background-color: var(--color-tertiary-background);
 }
 
-/* Section holding the text */
 main>ul>li>section {
+    width: 100%;
+}
+
+/* Section holding the text */
+main>ul>li>section>a {
     width: 100%;
     display: flex;
     flex-direction: row;
