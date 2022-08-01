@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="./assets/images/code-search.png" type="png">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="manifest" href="./manifest.json">
     <title>CodeX, GitHub code search extension</title>
 </head>
 
@@ -15,7 +16,7 @@
     <script type="text/javascript" src="./assets/js/index.js"></script>
     <main>
         <!-- THIS MIGHT NOT WORK WHEN MADE INTO AN EXTENSION AND THE ENTER KEY MAY HAVE TO BE DISABLED -->
-        <form id="search-form" onkeydown="if( event.key === 'Enter')searchHandler(event);">
+        <form id="search-form">
             <label for="codex-search" class="svg-container">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                     <path class="text-gray"
