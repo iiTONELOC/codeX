@@ -212,10 +212,9 @@ function deleteSearchHistoryItemFromDom(_id) {
  * the `handleItemDeletion ()`.
  * @param {object} e Event object
  */
-function deleteButtonKeyboardListener(e) {
+function enterKeyListener(e) {
     const target = e.target;
     const id = target.getAttribute('data-id');
-
     id && e.keyCode === enterKeyCode && handleItemDeletion(e);
 }
 
@@ -229,7 +228,7 @@ function historyListHandlers(e) {
 }
 
 function addListeners() {
-    document.addEventListener('keyup', deleteButtonKeyboardListener);
+    document.addEventListener('keyup', enterKeyListener);
     document.querySelector('#search-btn').addEventListener('click', searchHandler);
     document.querySelector('#history-list').addEventListener('click', historyListHandlers);
 }
