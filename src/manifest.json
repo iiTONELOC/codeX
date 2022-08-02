@@ -2,12 +2,15 @@
     "name": "The Codex",
     "version": "0.0.1",
     "description": "GitHub Code Search",
-    "manifest_version": 3,
+    "manifest_version": 2,
     "author": "Anthony Tropeano",
     "icons": {
         "128": "./assets/images/code-search.png"
     },
-    "action": {
+    "browser_action": {
         "default_popup": "index.html"
-    }
+    },
+    "permissions": [
+        "activeTab"
+    ]
 }
