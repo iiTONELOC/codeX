@@ -9,14 +9,13 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="manifest" href="./manifest.json">
-    <title>CodeX, GitHub code search extension</title>
+    <title>CodeX, a GitHub code searching extension</title>
 </head>
 
 <body>
     <script type="text/javascript" src="./assets/js/index.js"></script>
     <main>
-        <!-- THIS MIGHT NOT WORK WHEN MADE INTO AN EXTENSION AND THE ENTER KEY MAY HAVE TO BE DISABLED -->
-        <form id="search-form">
+        <form id="search-form" autocomplete="off">
             <label for="codex-search" class="svg-container">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                     <path class="text-gray"
@@ -26,8 +25,9 @@
                         clip-rule="evenodd" />
                 </svg>
             </label>
-            <input id="codex-search" type="text" placeholder="Code Search GitHub" type="text" name="codex-search">
-            <button id="search-btn" type="button">
+            <input id="codex-search" placeholder="GitHub Code Search" type="text" name="codex-search" 
+            class="pink-focus-outline">
+            <button id="search-btn" class="pink-focus-outline">
                 <strong>Search</strong>
             </button>
         </form>

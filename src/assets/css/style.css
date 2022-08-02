@@ -32,9 +32,8 @@
     background-color: var(--color-success);
 }
 
+
 /* DOCUMENT */
-
-
 body {
     display: flex;
     align-items: center;
@@ -111,14 +110,9 @@ input#codex-search[type="text"] {
     background-color: var(--color-tertiary-background);
 }
 
-input#codex-search[type="text"]:focus,
-input#codex-search[type="text"]:active {
-    border: var(--color-accent) 2px solid;
-    background-color: var(--color-tertiary-background);
-}
-
 button#search-btn {
     padding: 5px;
+    cursor: pointer;
     font-weight: bold;
     text-align: center;
     border-radius: .25rem;
@@ -133,8 +127,9 @@ button#search-btn:hover {
     background-color: var(--color-accent);
     transform: scaleX(1.07) scaleY(1.07);
 }
-
 /* END SEARCH BAR */
+
+
 
 /* START SEARCH HISTORY */
 
@@ -162,7 +157,7 @@ main>ul>li:hover {
 }
 
 main>ul>li>section {
-    width: 100%;
+    width: 80%;
 }
 
 /* Section holding the text */
@@ -171,11 +166,20 @@ main>ul>li>section>a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: start;
+}
+
+.ind-search-query {
+    max-width: 40%;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: auto;
+    text-overflow: ellipsis;
 }
 
 /* Delete Icon */
 .delete-icon {
+    cursor: pointer;
     transition-delay: 100ms;
     color: var(--color-gray);
 }
@@ -184,6 +188,10 @@ main>ul>li>section>a {
     transition-delay: 100ms;
     color: var(--color-warning);
     transform: scaleX(1.25) scaleY(1.25);
+}
+
+.pink-focus-outline:focus {
+    outline: var(--color-accent) 2px solid;
 }
 
 /* END SEARCH History */
