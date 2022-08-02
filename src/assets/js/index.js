@@ -132,9 +132,10 @@ function svgIcon(svgPath, extraSvgClasses = '') {
 function historyItem(_history) {
     const historyData = [
         formatTime(_history.time),
+        _history.query
     ];
+
     const renderClass=idx=>idx === 1?  'class="ind-search-query"' : '';
-    
     const pEl = () => historyData.map((text, idx) => `<p ${renderClass(idx)}> ${text}</p>`).join('\n');
     const pinkFocus = `class="pink-focus-outline"`;
     return (
